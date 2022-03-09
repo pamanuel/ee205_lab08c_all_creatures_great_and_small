@@ -5,13 +5,18 @@
 /// @file animal.h
 /// @version 1.0
 ///
-/// @author @Patrick Manuel <pamanuel@hawaii.edu>
+/// @author Patrick Manuel <pamanuel@hawaii.edu>
 /// @date   08_Mar_2022
 ///////////////////////////////////////////////////////////////////////////////
 
 #include <iostream>
-
+#include "animal.h"
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+
+        Animal myFirstAnimal = Animal( "Felis catus" );
+        myFirstAnimal.setGender( MALE );
+        myFirstAnimal.setWeight( 19 ); // @todo Refactor to include Unit of Measure
+        myFirstAnimal.printInfo();
+        return 0;
+
 }
