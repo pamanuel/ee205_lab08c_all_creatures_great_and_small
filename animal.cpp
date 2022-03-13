@@ -64,10 +64,10 @@ void Animal::setWeight(float newWeight) {
 
 void Animal::printInfo() {
     cout <<  "Animal Fields" << endl;
-    cout << "Kingdom = ["<< getKingdom() <<"]" << endl;
-    cout << "Species = ["<< getSpecies() <<"]" << endl;
-    cout << "Weight  = ["<< getWeight()  <<"]"  << endl;
-    cout << "Gender  = ["<< getGender()  <<"]"  << endl;
+    cout << "Kingdom = ["<< getKingdom() <<"]"      << endl;
+    cout << "Species = ["<< getSpecies() <<"]"      << endl;
+    cout << "Weight  = ["<< getWeight()  <<" lbs]"  << endl;
+    cout << "Gender  = ["<< getGender()  <<"]"      << endl;
 }
 
 bool Animal::isValid() {
@@ -97,7 +97,7 @@ bool Animal::validateSpecies(const std::string newSpecies) {
 
 void Animal::setSpecies(const std::string newSpecies) {
     if (!validateSpecies( newSpecies ))
-        throw invalid_argument("species can't be epmpty");
+        throw invalid_argument("species can't be empty");
 
     species = newSpecies;
 
